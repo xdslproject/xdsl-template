@@ -1,0 +1,30 @@
+name: docs
+
+on:
+  workflow_dispatch:
+  # TODO: Uncomment the following lines to automatically deploy documentation
+  #       when pushing to main (see <https://squidfunk.github.io/mkdocs-material/publishing-your-site/>)
+  # push:
+  #   branches:
+  #     - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      ### Check out repo, and set up python ###
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+      - name: Set up Python
+        run: uv python install $(cat .python-version)
+      - name: Install the project
+        run: uv sync --group docs
+      - name: Build and deploy the documentation website
+        run: uv run mkdocs gh-deploy --force

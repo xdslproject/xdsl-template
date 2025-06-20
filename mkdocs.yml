@@ -1,19 +1,19 @@
 # https://www.mkdocs.org/user-guide/configuration/
 
 # Project information
-site_name: xdsl-template                                     # TODO: Change this
-site_author: xDSL Developers                                 # TODO: Change this
-copyright: Copyright &copy xDSL Developers                   # TODO: Change this
+site_name: xdsl-template                                                        # TODO: Change this
+site_author: xDSL Developers                                                    # TODO: Change this
+copyright: Copyright &copy xDSL Developers                                      # TODO: Change this
 
 # Repository
-repo_name: xdsl/xdsl-template                                # TODO: Change this
-repo_url: https://github.com/xdsl/xdsl-template              # TODO: Change this
+repo_name: xdsl/xdsl-template                                                   # TODO: Change this
+repo_url: https://github.com/xdsl/xdsl-template                                 # TODO: Change this
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/xdsl                          # TODO: Change this
-      name: xDSL on Github                                   # TODO: Change this
+      link: https://github.com/xdsl                                             # TODO: Change this
+      name: xDSL on Github                                                      # TODO: Change this
 
 
 # Configuration
@@ -71,9 +71,6 @@ markdown_extensions:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       linenums: true
       anchor_linenums: true

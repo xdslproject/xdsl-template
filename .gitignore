@@ -212,3 +212,8 @@ cython_debug/
 # Operation system specific
 .DS_Store
 Thumbs.db
+
+# lit tests results
+**/.lit_test_times.txt
+tests/**/Output/*
+*.out

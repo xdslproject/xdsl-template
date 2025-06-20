@@ -1,11 +1,18 @@
 MAKEFLAGS += --warn-undefined-variables
 SHELL := bash
 
+# allow overriding which dependency groups are installed
+VENV_GROUPS ?= --group dev --group docs
+
+# set default lit options
+LIT_OPTIONS ?= -v --order=smart
+
+
 .PHONY: install
 install: .venv/ pre-commit
 
 .venv/:
-	uv sync
+	uv sync ${VENV_GROUPS}
 
 .PHONY: pre-commit
 pre-commit: .venv/
@@ -15,22 +22,34 @@ pre-commit: .venv/
 check: .venv/
 	uv run pre-commit run --all-files
 
+.PHONY: pyright
+pyright: .venv/
+	uv run pyright $(shell git diff --staged --name-only  -- '*.py')
+
 .PHONY: test
-test: .venv/
+test: pytest filecheck
+
+.PHONY: pytest
+pytest: .venv/
 	uv run coverage run -m pytest -s &&\
  		uv run coverage report -m
 
-.PHONY: docs-serve
-docs-serve: uv-installed
-	uv run mkdocs serve
+.PHONY: filecheck
+filecheck: .venv/
+	uv run lit $(LIT_OPTIONS) tests/filecheck
 
-.PHONY: docs-build
-docs-build: uv-installed
+.PHONY: docs
+docs: .venv/
+	uv run mkdocs serve
 	uv run mkdocs build
 
-.PHONY: clean
-clean:
+.PHONY: clean-caches
+clean-caches:
 	rm -rf .mypy_cache/ .pytest_cache/ .ruff_cache/ .coverage
 	find . -not -path "./.venv/*" | \
 		grep -E "(/__pycache__$$|\.pyc$$|\.pyo$$)" | \
 		xargs rm -rf
+
+.PHONY: clean
+clean: clean-caches
+	rm -rf ${VENV_DIR}

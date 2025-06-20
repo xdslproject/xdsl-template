@@ -31,8 +31,7 @@ test: pytest filecheck
 
 .PHONY: pytest
 pytest: .venv/
-	uv run coverage run -m pytest -s &&\
- 		uv run coverage report -m
+	uv run pytest -W error --cov
 
 .PHONY: filecheck
 filecheck: .venv/

@@ -8,13 +8,10 @@ dependencies = [
     "xdsl>=0.40.0",
 ]
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
-    "License :: OSI Approved :: MIT License",     # TODO: Change this if desired
-    "Natural Language :: English",
     "Programming Language :: Python :: 3 :: Only",
     "Typing :: Typed"
 ]
-license = { text = "MIT License" }                # TODO: Change this if desired
+license = { text = "Apache License v2.0 with LLVM Exceptions" }
 authors = []                                                 # TODO: Change this
 
 [project.urls]
@@ -42,6 +39,9 @@ docs = [
 
 
 [tool.pyright]
+venvPath = "."
+venv = ".venv"
+enableExperimentalFeatures = true
 reportAssertAlwaysTrue = true
 reportUnnecessaryCast = true
 reportUnnecessaryIsInstance = true

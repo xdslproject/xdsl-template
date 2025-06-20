@@ -34,7 +34,3 @@ clean:
 	find . -not -path "./.venv/*" | \
 		grep -E "(/__pycache__$$|\.pyc$$|\.pyo$$)" | \
 		xargs rm -rf
-
-.PHONY: clobber
-clobber: clean
-	rm -rf .venv/

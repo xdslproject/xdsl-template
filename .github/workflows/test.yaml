@@ -27,7 +27,7 @@ jobs:
       - name: Install the project
         run: make install
       - name: Run the unit tests
-        run: make test
+        run: make tests
 
   check:
     runs-on: ubuntu-latest

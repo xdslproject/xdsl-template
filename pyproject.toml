@@ -5,7 +5,7 @@ description = "A template project using xDSL."                                  
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "xdsl==0.54.1",
+    "xdsl==0.54.2",
 ]
 classifiers = [
     "Programming Language :: Python :: 3 :: Only",

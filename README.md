@@ -9,7 +9,7 @@ A template for projects using xDSL.
 3. Fill in the blanks:
    - Rename `src/xdsltemplate` to `src/projectname`
    - Find all instances of "TODO: " in the project and complete them
-     
+
      | File | Item to replace | Content |
      | ---- | --------------- | ------- |
      | `mkdocs.yml` | `site_name` | Documentation website title |
@@ -25,6 +25,8 @@ A template for projects using xDSL.
      | `pyproject.toml` | `project.urls.Source Code` | Project repository URL |
      | `pyproject.toml` | `project.urls.Issue Tracker` | Project issue tracker URL |
      | `docs.yml` | `on` | Uncomment to automatically deploy documentation site |
+     | `src/xdsltemplate/__init__.py` | `name` | Replace with name of the project |
+     | `src/xdsltemplate/` | Directory name | Replace with name of the project |
 
 4. Run `make install` to set up your environment
 5. To adopt later template improvements, simply sync with the forked main branch

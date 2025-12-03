@@ -1,6 +1,5 @@
 [project]
 name = "xdsltemplate"                                                           # TODO: Change this
-version = "0.1.0"
 description = "A template project using xDSL."                                  # TODO: Change this
 readme = "README.md"
 requires-python = ">=3.10"
@@ -13,6 +12,7 @@ classifiers = [
 ]
 license = { text = "Apache License v2.0 with LLVM Exceptions" }
 authors = []                                                                    # TODO: Change this
+dynamic = ["version"]
 
 [project.entry-points.'xdsl.universe']
 xdsl_template = 'xdsltemplate.universe:UNIVERSE'                                # TODO: Change this
@@ -24,8 +24,11 @@ Homepage = "https://xdsl.dev/xdsl-template"                                     
 
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
 
 [dependency-groups]
 dev = [

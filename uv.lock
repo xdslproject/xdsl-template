@@ -974,7 +974,7 @@ docs = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "xdsl", specifier = "==0.54.3" }]
+requires-dist = [{ name = "xdsl", specifier = "~=0.54.3" }]
 
 [package.metadata.requires-dev]
 dev = [

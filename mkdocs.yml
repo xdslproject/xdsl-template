@@ -6,7 +6,7 @@ site_author: xDSL Developers                                                    
 copyright: Copyright &copy xDSL Developers                                      # TODO: Change this
 
 # Repository
-repo_name: xdsl/xdsl-template                                                   # TODO: Change this
+repo_name: xdslproject/xdsl-template                                            # TODO: Change this
 repo_url: https://github.com/xdslproject/xdsl-template                          # TODO: Change this
 
 extra:

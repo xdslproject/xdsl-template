@@ -17,5 +17,8 @@
   "rangeStrategy": "replace",
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
+  "semanticCommits": "enabled",
+  "semanticCommitType": "dependencies",
+  "semanticCommitScope": null
 }

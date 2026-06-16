@@ -42,6 +42,10 @@ docs: .venv/
 	uv run mkdocs serve
 	uv run mkdocs build
 
+.PHONY: sync
+sync:
+	uvx sync-template sync
+
 .PHONY: clean-caches
 clean-caches:
 	rm -rf .mypy_cache/ .pytest_cache/ .ruff_cache/ .coverage

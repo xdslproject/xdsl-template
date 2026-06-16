@@ -4,9 +4,26 @@ A template for projects using xDSL.
 
 ## Usage
 
-1. Fork this repository
-2. Pick a name for your project
-3. Fill in the blanks:
+### Create a new project
+
+Use [sync-template](https://github.com/XXCC-Unicorn-Press/sync-template) to create a project from this template:
+
+```bash
+uvx sync-template init gh:xdslproject/xdsl-template my-new-project
+cd my-new-project
+```
+
+To add the template remote to an existing repository instead:
+
+```bash
+cd my-existing-repo
+uvx sync-template init gh:xdslproject/xdsl-template --existing
+```
+
+### Customize the project
+
+1. Pick a name for your project
+2. Fill in the blanks:
    - Rename `src/xdsltemplate` to `src/projectname`
    - Find all instances of "TODO: " in the project and complete them
 
@@ -28,8 +45,17 @@ A template for projects using xDSL.
      | `src/xdsltemplate/__init__.py` | `name` | Replace with name of the project |
      | `src/xdsltemplate/` | Directory name | Replace with name of the project |
 
-4. Run `make install` to set up your environment
-5. To adopt later template improvements, simply sync with the forked main branch
+3. Run `make install` to set up your environment
+
+### Sync template updates
+
+When the template has updates, sync them into your project:
+
+```bash
+make sync
+```
+
+This runs `uvx sync-template sync`.
 
 ## Example project structure
 

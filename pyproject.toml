@@ -34,8 +34,7 @@ source = "vcs"
 dev = [
     "filecheck==1.0.3",
     "lit<19.0.0",
-    "pre-commit-hooks>=5.0.0",
-    "pre-commit>=4.0.1",
+    "prek~=0.4.0",
     "pytest>=8.3.4",
     "pytest-cov",
     "pyright==1.1.410",

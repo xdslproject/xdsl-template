@@ -65,12 +65,12 @@ exclude_dirs = [ ".venv/" ]
 skips = [ "B101" ]
 
 [tool.pyright]
-venv = ".venv"
-venvPath = "."
 typeCheckingMode = "strict"
 include = [ "docs", "src", "tests" ]
 extraPaths = [ "tests" ]
 enableExperimentalFeatures = true
+# Use specific rule ignore instead if necessary
+enableTypeIgnoreComments = false
 reportAssertAlwaysTrue = true
 reportUnnecessaryCast = true
 reportUnnecessaryIsInstance = true

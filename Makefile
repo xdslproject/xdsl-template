@@ -71,7 +71,7 @@ pyright: uv-installed ## run pyright
 tests: pytest filecheck ## run functional tests
 
 .PHONY: tests
-tests: test-functional pyright ## run all tests
+tests: tests-functional pyright ## run all tests
 
 .PHONY: docs
 docs: uv-installed ## Build and serve documentation

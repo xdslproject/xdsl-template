@@ -26,6 +26,7 @@ jobs:
         with:
           enable-cache: true
           cache-dependency-glob: "uv.lock"
+          prune-cache: false
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v7
@@ -38,6 +39,3 @@ jobs:
       - name: Run all tests
         run: |
           make tests-functional
-
-      - name: Prune uv cache
-        run: uv cache prune --ci

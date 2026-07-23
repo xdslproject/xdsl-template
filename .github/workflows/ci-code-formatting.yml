@@ -22,7 +22,6 @@ jobs:
         with:
           enable-cache: true
           cache-dependency-glob: "uv.lock"
-          prune-cache: false
 
       - name: Set up Python 3.14
         uses: actions/setup-python@v7

@@ -30,7 +30,7 @@ entry-points."xdsl.universe".xdsl_template = "xdsltemplate.universe:UNIVERSE"  #
 [dependency-groups]
 dev = [
   "filecheck==1.0.3",
-  "lit<19",
+  "lit<24",
   "prek~=0.4.0",
   "psutil",
   "pyright==1.1.411",

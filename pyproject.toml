@@ -8,10 +8,9 @@ description = "A template project using xDSL."  # TODO: Change this
 readme = "README.md"
 license = { text = "Apache License v2.0 with LLVM Exceptions" }
 authors = []  # TODO: Change this
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
@@ -47,8 +46,8 @@ docs = [
 version.source = "vcs"
 
 [tool.ruff]
-# Support Python 3.10+.
-target-version = "py310"
+# Support Python 3.11+.
+target-version = "py311"
 src = [ "src/", "tests/" ]
 format.docstring-code-format = true
 lint.select = [ "E", "F", "I", "INP", "PT", "PYI", "TID251", "UP", "W" ]

@@ -24,9 +24,7 @@ jobs:
           cache-dependency-glob: "uv.lock"
 
       - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: $(cat .python-version)
+        run: uv python install $(cat .python-version)
 
       - name: Run code formatting checks with prek
         uses: j178/prek-action@v3.0.2
